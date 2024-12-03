@@ -14,8 +14,11 @@ print(c)
 print()
 
 plt.figure()
-plt.plot(a, b)
-plt.plot(a, c)
+plt.plot(a, b, label='a vs b')
+plt.plot(a, c, label='a vs c')
+plt.legend()
 plt.show()
 
+
 d = c
+print(d)

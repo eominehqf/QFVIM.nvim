@@ -43,3 +43,6 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false -- 默认不折叠
 vim.opt.foldlevel = 99     -- 设置默认折叠级别为 99，所有代码展开
+
+
+vim.o.completeopt = "menu,menuone,noinsert,noselect,popup"

@@ -41,6 +41,9 @@ require("lazy").setup({
     { import = "plugins.nvim-dap" },
     { import = "plugins.nvim-dap-ui" },
     { import = "plugins.nvim-dap-python" },
+
+    { import = "plugins.copilot" },
+    { import = "plugins.copilotchat" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
