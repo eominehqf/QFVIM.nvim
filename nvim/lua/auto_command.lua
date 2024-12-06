@@ -14,3 +14,10 @@ vim.cmd("colorscheme kanagawa")
 --         })
 --     end,
 -- })
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.cmd([[LspStart marksman]])
+    end,
+})

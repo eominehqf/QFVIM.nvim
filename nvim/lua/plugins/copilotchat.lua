@@ -8,7 +8,7 @@ return {
       build = "make tiktoken", -- Only on MacOS or Linux
       opts = {
         -- system_prompt = prompts.COPILOT_INSTRUCTIONS, -- System prompt to use (can be specified manually in prompt via /).
-        system_prompt = 'You are a helpful coding assistant. Your goal is to assist the user in writing code, fixing bugs, and understanding technical concepts.Respond concisely, prioritize clarity, and provide examples where applicable.',
+        system_prompt = 'You are a helpful coding assistant. Your goal is to assist the user in writing code, fixing bugs, and understanding technical concepts.Respond concisely, prioritize clarity, and provide examples where applicable. please speak in Chinese',
         model = 'gpt-4o', -- Default model to use, see ':CopilotChatModels' for available models (can be specified manually in prompt via $).
         agent = 'copilot', -- Default agent to use, see ':CopilotChatAgents' for available agents (can be specified manually in prompt via @).
         context = nil, -- Default context or array of contexts to use (can be specified manually in prompt via #).
@@ -84,26 +84,26 @@ return {
         -- default prompts
         prompts = {
             Explain = {
-            prompt = '> /COPILOT_EXPLAIN\n\nWrite an explanation for the selected code as paragraphs of text.',
+            prompt = '> /COPILOT_EXPLAIN\n\n用文字段落对所选代码进行解释。',
             },
             Review = {
-            prompt = '> /COPILOT_REVIEW\n\nReview the selected code.',
+            prompt = '> /COPILOT_REVIEW\n\n查看所选代码。',
             -- see config.lua for implementation
             },
             Fix = {
-            prompt = '> /COPILOT_GENERATE\n\nThere is a problem in this code. Rewrite the code to show it with the bug fixed.',
+            prompt = '> /COPILOT_GENERATE\n\n这段代码有问题。请重写代码，以显示已修复错误的代码。',
             },
             Optimize = {
-            prompt = '> /COPILOT_GENERATE\n\nOptimize the selected code to improve performance and readability.',
+            prompt = '> /COPILOT_GENERATE\n\n优化所选代码，以提高性能和可读性。',
             },
             Docs = {
-            prompt = '> /COPILOT_GENERATE\n\nPlease add documentation comments to the selected code.',
+            prompt = '> /COPILOT_GENERATE\n\n请为所选代码添加文档注释。',
             },
             Tests = {
-            prompt = '> /COPILOT_GENERATE\n\nPlease generate tests for my code.',
+            prompt = '> /COPILOT_GENERATE\n\n请为我的代码生成测试。',
             },
             Commit = {
-            prompt = '> #git:staged\n\nWrite commit message for the change with commitizen convention. Make sure the title has maximum 50 characters and message is wrapped at 72 characters. Wrap the whole message in code block with language gitcommit.',
+            prompt = '> #git:staged\n\n按照 commitizen 惯例为更改编写提交信息。确保标题最多不超过 50 个字符，信息最多不超过 72 个字符。用 gitcommit 语言将整个信息封装在代码块中。',
             },
         },
 

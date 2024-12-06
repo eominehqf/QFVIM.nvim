@@ -19,6 +19,5 @@ plt.plot(a, c, label='a vs c')
 plt.legend()
 plt.show()
 
-
 d = c
 print(d)

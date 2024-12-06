@@ -21,10 +21,10 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', opts)  -- 右窗口
 
 -- 调整窗口大小
 vim.keymap.set('n', '<leader>=', '<C-w>=')  -- 窗口等宽等高
-vim.keymap.set('n', '<leader>+', ':resize +2<CR>')  -- 垂直增加高度
-vim.keymap.set('n', '<leader>-', ':resize -2<CR>')  -- 垂直减少高度
-vim.keymap.set('n', '<leader><', ':vertical resize -2<CR>')  -- 水平减少宽度
-vim.keymap.set('n', '<leader>>', ':vertical resize +2<CR>')  -- 水平增加宽度
+vim.keymap.set('n', '<leader>Up', ':resize +2<CR>')  -- 垂直增加高度
+vim.keymap.set('n', '<leader>Down', ':resize -2<CR>')  -- 垂直减少高度
+vim.keymap.set('n', '<leader>Left', ':vertical resize -2<CR>')  -- 水平减少宽度
+vim.keymap.set('n', '<leader>Right', ':vertical resize +2<CR>')  -- 水平增加宽度
 
 -- 快速跳转到行首和行尾
 vim.keymap.set('n', 'H', '0')  -- 行首（非空字符）
@@ -34,13 +34,23 @@ vim.keymap.set('n', 'L', '$')  -- 行尾
 vim.keymap.set('n', 'n', 'nzzzv')  -- 保持跳转位置居中
 vim.keymap.set('n', 'N', 'Nzzzv')
 
+vim.keymap.set("n", "<leader>w", "<c-w>", { desc = "Windows", remap = true })
+vim.keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
+vim.keymap.set("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
+vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
+
 
 -----------------
 -- Insert mode --
 -----------------
-
 -- 使用jk退出插入模式
 vim.keymap.set('i', 'jk', '<Esc>', opts)
+
+-----------------
+-- visual mode --
+-----------------
+vim.keymap.set('v', '<', '<gv', opts)
+vim.keymap.set('v', '>', '>gv', opts)
 
 
 -----------------------

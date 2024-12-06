@@ -22,7 +22,13 @@ return {
             -- ["<C-b>"] = cmp.mapping.scroll_docs(-4),
             -- ["<C-f>"] = cmp.mapping.scroll_docs(4),
             -- ["<C-Space>"] = cmp.mapping.complete(),
-            -- ["<C-e>"] = cmp.mapping.abort(),
+            ["<C-c>"] = function(fallback)
+              if cmp.visible() then
+                cmp.abort() -- 取消补全
+              else
+                fallback() -- 执行默认的 <C-c> 行为
+              end
+            end,
             ["<CR>"] = cmp.mapping.confirm({ select = true }), -- 确认补全
             ["<C-j>"] = cmp.mapping.select_next_item(), -- 下一个补全项
             ["<C-k>"] = cmp.mapping.select_prev_item(), -- 上一个补全项

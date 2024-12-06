@@ -5,11 +5,13 @@ return {
     opts = {
       suggestion = { 
         enabled = true,-- 自动建议
+        auto_trigger = true,
         debounce = 75, -- 防抖，单位毫秒
       }, 
       panel = { enabled = true }, -- 显示建议面板
       filetypes = {
-        python = true, -- 在 markdown 文件中启用
+        python = true, -- 在 python 文件中启用
+        markdown = true, -- 在 markdown 文件中启用
         help = false, -- 禁用在 help 文件中
         --["*"] = true, -- 其他所有文件类型启用
       },

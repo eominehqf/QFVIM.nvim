@@ -32,15 +32,17 @@ require("lazy").setup({
     { import = "plugins.bufferline" },
     { import = "plugins.lualine" },
     { import = "plugins.dashboard-nvim" },
-    
+
     { import = "plugins.mason" },
     { import = "plugins.mason-lspconfig" },
     { import = "plugins.nvim-cmp" },
     { import = "plugins.nvim-lspconfig" },
+    { import = "plugins.autopairs" },
 
     { import = "plugins.nvim-dap" },
     { import = "plugins.nvim-dap-ui" },
     { import = "plugins.nvim-dap-python" },
+    { import = "plugins.markdown-preview" },
 
     { import = "plugins.copilot" },
     { import = "plugins.copilotchat" },
