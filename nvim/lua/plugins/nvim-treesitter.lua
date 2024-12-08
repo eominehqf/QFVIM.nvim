@@ -10,7 +10,11 @@ return {
           "markdown", 
           "vim", 
           "vimdoc", 
-          "luadoc" 
+          "luadoc",
+          "html",
+          "css",
+          "javascript",
+          "typescript",
         }, -- 指定要安装的解析器
         incremental_selection = { -- 增量选择
           enable = true,

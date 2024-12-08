@@ -21,3 +21,9 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.cmd([[LspStart marksman]])
     end,
 })
+
+-- 实时预览html，需要npm install -g live-server
+vim.api.nvim_create_user_command("PreviewHTML", function()
+    local filename = vim.fn.expand("%:p")
+    vim.cmd("!live-server " .. filename)
+end, {})

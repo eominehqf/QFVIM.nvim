@@ -29,10 +29,20 @@ return {
             capabilities = capabilities,
         })
 
-        -- lspconfig.tsserver.setup({
-        --     on_attach = on_attach,
-        --     capabilities = capabilities,
-        -- })
+        lspconfig.html.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+        })
+
+        lspconfig.cssls.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+        })
+
+        lspconfig.ts_ls.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+        })
 
         lspconfig.lua_ls.setup({
             on_attach = on_attach,

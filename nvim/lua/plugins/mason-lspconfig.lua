@@ -3,7 +3,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
     opts = {
-    ensure_installed = { "pyright", "lua_ls", "marksman" }, -- 自动安装这些 LSP
+    ensure_installed = { "pyright", "lua_ls", "marksman", "html", "cssls", "ts_ls"}, -- 自动安装这些 LSP
     automatic_installation = true, -- 自动安装未安装的 LSP
     },
     config = function(_, opts)

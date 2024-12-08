@@ -34,7 +34,6 @@ vim.keymap.set('n', 'L', '$')  -- 行尾
 vim.keymap.set('n', 'n', 'nzzzv')  -- 保持跳转位置居中
 vim.keymap.set('n', 'N', 'Nzzzv')
 
-vim.keymap.set("n", "<leader>w", "<c-w>", { desc = "Windows", remap = true })
 vim.keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
 vim.keymap.set("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
 vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
